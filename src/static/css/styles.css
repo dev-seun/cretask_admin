@@ -1,0 +1,155 @@
+:root {
+  --shadow: 1px 10px 10px rgb(238, 238, 238);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.show {
+  height: 100vh;
+  width: 15%;
+  /* min-width: 200px; */
+  position: fixed;
+  box-shadow: var(--shadow);
+}
+
+.show ul {
+  margin: 0;
+  padding-left: 4%;
+}
+
+.show li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  background-color: whitesmoke;
+  box-shadow: var(--shadow);
+  margin: 15px auto;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.show li:hover {
+  cursor: pointer;
+  color: white;
+  transition: 200ms ease-in;
+  background-color: rgb(167, 167, 167);
+}
+
+main {
+  /* background-color: aqua; */
+  /* padding-left: 20px; */
+  width: 83%;
+  height: 100%;
+  position: relative;
+  right: -16%;
+}
+
+header {
+  z-index: -10;
+  height: 70px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.login-section {
+  width: 40%;
+  margin: 20% auto;
+  justify-content: center;
+  padding: 5%;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+}
+
+.mobile-menu {
+  font-size: 2rem;
+  display: none;
+}
+
+.profile-page {
+  margin: 0 5%;
+}
+
+@media only screen and (max-width: 960px) {
+  .show {
+    height: 100vh;
+    font-size: 0.8rem;
+    max-width: 15%;
+    position: fixed;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+  }
+}
+
+.cards {
+  width: 95%;
+  margin: 2% 0;
+  padding: 5%;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 760px) {
+  .mobile-menu {
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+  }
+
+  .hide {
+    display: none;
+    background-color: red;
+  }
+
+  .show {
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+    display: block;
+    z-index: 10;
+  }
+
+  main {
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+  }
+}
